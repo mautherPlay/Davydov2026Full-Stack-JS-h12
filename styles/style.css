@@ -47,9 +47,25 @@ header .container {
 
 header h1 {
   flex: 1 1 0%;
-  color: var(--color-sunburst);
   font-size: 24px;
   margin-bottom: 0;
+}
+
+.brand-link {
+  display: inline-block;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: var(--color-sunburst);
+  color: var(--color-mahogany);
+  text-decoration: none;
+  animation:
+    brand-flicker 1.5s infinite,
+    text-flicker 1.5s infinite;
+}
+
+.brand-link:hover,
+.brand-link:focus {
+  background-color: var(--color-spruce);
 }
 
 header nav > ul {
@@ -224,6 +240,36 @@ main section p {
   }
   100% {
     border-style: dashed;
+  }
+}
+
+@keyframes brand-flicker {
+  0%,
+  100% {
+    transform: rotate(2deg) scale(1);
+    background-color: var(--color-spruce);
+  }
+  25% {
+    transform: rotate(-1deg) scale(1.05);
+    background-color: var(--color-sunburst);
+  }
+  50% {
+    transform: rotate(-2deg) scale(1);
+    background-color: var(--color-spruce);
+  }
+  75% {
+    transform: rotate(1deg) scale(1.05);
+    background-color: var(--color-sunburst);
+  }
+}
+
+@keyframes text-flicker {
+  0%,
+  100% {
+    color: var(--color-mahogany);
+  }
+  50% {
+    color: var(--color-rosewood);
   }
 }
 
