@@ -115,12 +115,12 @@ header .header-icons a {
 }
 
 header .header-icons a:hover,
-a:focus {
+header .header-icons a:focus {
   background-color: black;
 }
 
 header .header-icons a:hover svg,
-a:focus svg {
+header .header-icons a:focus svg {
   fill: var(--color-sunburst);
 }
 
@@ -211,7 +211,6 @@ main section p {
 .hero-button:focus {
   background-color: var(--color-mahogany);
   color: var(--color-sunburst);
-  text-decoration: none;
   transform: scale(1.1);
 }
 
@@ -247,19 +246,15 @@ main section p {
   0%,
   100% {
     transform: rotate(2deg) scale(1);
-    background-color: var(--color-spruce);
   }
   25% {
     transform: rotate(-1deg) scale(1.05);
-    background-color: var(--color-sunburst);
   }
   50% {
     transform: rotate(-2deg) scale(1);
-    background-color: var(--color-spruce);
   }
   75% {
     transform: rotate(1deg) scale(1.05);
-    background-color: var(--color-sunburst);
   }
 }
 
